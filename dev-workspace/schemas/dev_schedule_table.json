@@ -1,0 +1,62 @@
+{
+  "tableName": "u_developer_schedule",
+  "displayLabel": "Developer Schedule",
+  "description": "Manages developer availability and work schedules",
+  "fields": [
+    {
+      "columnName": "u_developer_name",
+      "fieldType": "string",
+      "maxLength": 150,
+      "label": "Developer Name",
+      "mandatory": true
+    },
+    {
+      "columnName": "u_shift_start",
+      "fieldType": "datetime",
+      "label": "Shift Start Time",
+      "mandatory": true
+    },
+    {
+      "columnName": "u_shift_end",
+      "fieldType": "datetime",
+      "label": "Shift End Time",
+      "mandatory": true
+    },
+    {
+      "columnName": "u_availability_status",
+      "fieldType": "choice",
+      "label": "Availability",
+      "choices": [
+        {"value": "available", "label": "Available"},
+        {"value": "busy", "label": "Busy"},
+        {"value": "meeting", "label": "In Meeting"},
+        {"value": "pto", "label": "PTO/Leave"},
+        {"value": "oncall", "label": "On-Call"}
+      ],
+      "defaultValue": "available"
+    },
+    {
+      "columnName": "u_current_sprint",
+      "fieldType": "string",
+      "maxLength": 100,
+      "label": "Current Sprint"
+    },
+    {
+      "columnName": "u_assigned_tasks",
+      "fieldType": "text",
+      "label": "Assigned Tasks Summary"
+    },
+    {
+      "columnName": "u_location",
+      "fieldType": "string",
+      "maxLength": 100,
+      "label": "Work Location"
+    },
+    {
+      "columnName": "u_notes",
+      "fieldType": "text",
+      "label": "Schedule Notes"
+    }
+  ],
+  "extends": "sys_metadata"
+}

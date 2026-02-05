@@ -1,0 +1,161 @@
+{
+  "workspaceId": "dev_command_center",
+  "title": "Developer Command Center",
+  "description": "Central dashboard for development team management and collaboration",
+  "layout": {
+    "type": "sidebar_layout",
+    "sidebarPosition": "left",
+    "sidebarWidth": 250,
+    "contentArea": "fluid"
+  },
+  "theme": {
+    "primaryColor": "#0066cc",
+    "secondaryColor": "#5c9fd8",
+    "accentColor": "#ff6b35",
+    "backgroundColor": "#f5f7fa"
+  },
+  "sidebar": {
+    "logo": {
+      "text": "Dev Hub",
+      "icon": "code-branch"
+    },
+    "navigationSections": [
+      {
+        "sectionId": "overview",
+        "title": "Overview",
+        "items": [
+          {
+            "id": "dashboard_home",
+            "label": "Dashboard Home",
+            "icon": "dashboard",
+            "route": "/workspace/dev_command_center/home",
+            "order": 1
+          },
+          {
+            "id": "team_metrics",
+            "label": "Team Metrics",
+            "icon": "chart-bar",
+            "route": "/workspace/dev_command_center/metrics",
+            "order": 2
+          }
+        ]
+      },
+      {
+        "sectionId": "reviews",
+        "title": "Code Reviews",
+        "items": [
+          {
+            "id": "peer_review_list",
+            "label": "All Peer Reviews",
+            "icon": "search-code",
+            "route": "/workspace/dev_command_center/peer_reviews",
+            "table": "u_code_peer_review",
+            "order": 1
+          },
+          {
+            "id": "my_reviews",
+            "label": "My Reviews",
+            "icon": "user-check",
+            "route": "/workspace/dev_command_center/my_reviews",
+            "table": "u_code_peer_review",
+            "filter": "u_reviewer_name=CURRENT_USER",
+            "order": 2
+          },
+          {
+            "id": "pending_reviews",
+            "label": "Pending Reviews",
+            "icon": "clock",
+            "route": "/workspace/dev_command_center/pending",
+            "table": "u_code_peer_review",
+            "filter": "u_review_status=scheduled",
+            "order": 3
+          }
+        ]
+      },
+      {
+        "sectionId": "schedules",
+        "title": "Team Schedules",
+        "items": [
+          {
+            "id": "all_schedules",
+            "label": "All Schedules",
+            "icon": "calendar-alt",
+            "route": "/workspace/dev_command_center/schedules",
+            "table": "u_developer_schedule",
+            "order": 1
+          },
+          {
+            "id": "my_schedule",
+            "label": "My Schedule",
+            "icon": "user-clock",
+            "route": "/workspace/dev_command_center/my_schedule",
+            "table": "u_developer_schedule",
+            "filter": "u_developer_name=CURRENT_USER",
+            "order": 2
+          },
+          {
+            "id": "team_availability",
+            "label": "Team Availability",
+            "icon": "users",
+            "route": "/workspace/dev_command_center/availability",
+            "table": "u_developer_schedule",
+            "filter": "u_availability_status=available",
+            "order": 3
+          }
+        ]
+      },
+      {
+        "sectionId": "tools",
+        "title": "Developer Tools",
+        "items": [
+          {
+            "id": "code_quality",
+            "label": "Code Quality",
+            "icon": "shield-check",
+            "route": "/workspace/dev_command_center/quality",
+            "order": 1
+          },
+          {
+            "id": "documentation",
+            "label": "Documentation",
+            "icon": "book-open",
+            "route": "/workspace/dev_command_center/docs",
+            "order": 2
+          }
+        ]
+      }
+    ]
+  },
+  "quickActions": [
+    {
+      "id": "new_review",
+      "label": "Schedule Peer Review",
+      "icon": "plus-circle",
+      "action": "create_record",
+      "table": "u_code_peer_review"
+    },
+    {
+      "id": "update_schedule",
+      "label": "Update My Schedule",
+      "icon": "edit",
+      "action": "create_record",
+      "table": "u_developer_schedule"
+    }
+  ],
+  "widgets": [
+    {
+      "widgetId": "review_stats",
+      "title": "Review Statistics",
+      "type": "stats_card",
+      "dataSource": "u_code_peer_review",
+      "position": {"row": 1, "col": 1}
+    },
+    {
+      "widgetId": "schedule_overview",
+      "title": "Today's Schedule",
+      "type": "calendar_card",
+      "dataSource": "u_developer_schedule",
+      "position": {"row": 1, "col": 2}
+    }
+  ]
+}
