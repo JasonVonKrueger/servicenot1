@@ -1,0 +1,62 @@
+{
+  "tableName": "u_code_peer_review",
+  "displayLabel": "Code Peer Review",
+  "description": "Tracks peer review sessions for code quality assurance",
+  "fields": [
+    {
+      "columnName": "u_reviewer_name",
+      "fieldType": "string",
+      "maxLength": 150,
+      "label": "Reviewer Name",
+      "mandatory": true
+    },
+    {
+      "columnName": "u_reviewee_name",
+      "fieldType": "string",
+      "maxLength": 150,
+      "label": "Developer Being Reviewed",
+      "mandatory": true
+    },
+    {
+      "columnName": "u_review_date",
+      "fieldType": "date",
+      "label": "Review Date",
+      "mandatory": true
+    },
+    {
+      "columnName": "u_code_quality_score",
+      "fieldType": "integer",
+      "label": "Code Quality Score (1-10)",
+      "mandatory": false
+    },
+    {
+      "columnName": "u_review_status",
+      "fieldType": "choice",
+      "label": "Review Status",
+      "choices": [
+        {"value": "scheduled", "label": "Scheduled"},
+        {"value": "in_progress", "label": "In Progress"},
+        {"value": "completed", "label": "Completed"},
+        {"value": "cancelled", "label": "Cancelled"}
+      ],
+      "defaultValue": "scheduled"
+    },
+    {
+      "columnName": "u_code_module",
+      "fieldType": "string",
+      "maxLength": 200,
+      "label": "Code Module/Component"
+    },
+    {
+      "columnName": "u_feedback_notes",
+      "fieldType": "text",
+      "label": "Feedback and Notes"
+    },
+    {
+      "columnName": "u_action_items",
+      "fieldType": "text",
+      "label": "Action Items"
+    }
+  ],
+  "extends": "task"
+}

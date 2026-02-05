@@ -1,0 +1,32 @@
+{
+  "navigationMenu": {
+    "menuId": "dev_workspace_nav",
+    "title": "Developer Workspace",
+    "description": "Navigation menu for developer workspace application",
+    "menuItems": [
+      {
+        "itemId": "nav_workspace",
+        "label": "Open Workspace",
+        "targetWorkspace": "dev_command_center",
+        "order": 10,
+        "roles": ["developer", "admin"]
+      },
+      {
+        "itemId": "nav_peer_reviews",
+        "label": "Peer Reviews",
+        "targetTable": "u_code_peer_review",
+        "viewType": "list",
+        "order": 20,
+        "roles": ["developer", "admin"]
+      },
+      {
+        "itemId": "nav_schedules",
+        "label": "Developer Schedules",
+        "targetTable": "u_developer_schedule",
+        "viewType": "list",
+        "order": 30,
+        "roles": ["developer", "admin"]
+      }
+    ]
+  }
+}
