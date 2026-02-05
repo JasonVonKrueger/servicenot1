@@ -1,0 +1,134 @@
+{
+  "sampleData": {
+    "peerReviews": [
+      {
+        "u_reviewer_name": "Jane Smith",
+        "u_reviewee_name": "John Doe",
+        "u_review_date": "2026-02-10",
+        "u_code_quality_score": 8,
+        "u_review_status": "scheduled",
+        "u_code_module": "Authentication Service",
+        "u_feedback_notes": "Review scheduled to cover OAuth implementation and token management",
+        "u_action_items": "Prepare code walkthrough for session"
+      },
+      {
+        "u_reviewer_name": "Mike Johnson",
+        "u_reviewee_name": "Sarah Williams",
+        "u_review_date": "2026-02-08",
+        "u_code_quality_score": 9,
+        "u_review_status": "completed",
+        "u_code_module": "Data Import Module",
+        "u_feedback_notes": "Excellent error handling and validation logic. Clean code structure with good documentation.",
+        "u_action_items": "Add unit tests for edge cases; Document API endpoints"
+      },
+      {
+        "u_reviewer_name": "Sarah Williams",
+        "u_reviewee_name": "Mike Johnson",
+        "u_review_date": "2026-02-12",
+        "u_code_quality_score": null,
+        "u_review_status": "scheduled",
+        "u_code_module": "Report Generator",
+        "u_feedback_notes": "",
+        "u_action_items": "Prepare demo environment for review"
+      },
+      {
+        "u_reviewer_name": "Jane Smith",
+        "u_reviewee_name": "Emily Chen",
+        "u_review_date": "2026-02-09",
+        "u_code_quality_score": 7,
+        "u_review_status": "in_progress",
+        "u_code_module": "User Dashboard UI",
+        "u_feedback_notes": "Good component structure, consider performance optimizations for large datasets",
+        "u_action_items": "Implement lazy loading; Add loading indicators; Optimize re-renders"
+      }
+    ],
+    "developerSchedules": [
+      {
+        "u_developer_name": "John Doe",
+        "u_shift_start": "2026-02-06T09:00:00",
+        "u_shift_end": "2026-02-06T17:00:00",
+        "u_availability_status": "available",
+        "u_current_sprint": "Sprint 23",
+        "u_assigned_tasks": "TASK-101: API Integration, TASK-102: Bug fixes",
+        "u_location": "Office - Building A",
+        "u_notes": "Available for code reviews in the afternoon"
+      },
+      {
+        "u_developer_name": "Jane Smith",
+        "u_shift_start": "2026-02-06T08:30:00",
+        "u_shift_end": "2026-02-06T16:30:00",
+        "u_availability_status": "busy",
+        "u_current_sprint": "Sprint 23",
+        "u_assigned_tasks": "TASK-205: Security Audit, TASK-206: OAuth Implementation",
+        "u_location": "Remote",
+        "u_notes": "In deep work session until 14:00"
+      },
+      {
+        "u_developer_name": "Mike Johnson",
+        "u_shift_start": "2026-02-06T10:00:00",
+        "u_shift_end": "2026-02-06T18:00:00",
+        "u_availability_status": "meeting",
+        "u_current_sprint": "Sprint 23",
+        "u_assigned_tasks": "TASK-301: Report Module, TASK-302: Data Visualization",
+        "u_location": "Office - Building B",
+        "u_notes": "Sprint planning meeting 10:00-11:30"
+      },
+      {
+        "u_developer_name": "Sarah Williams",
+        "u_shift_start": "2026-02-06T09:00:00",
+        "u_shift_end": "2026-02-06T17:00:00",
+        "u_availability_status": "available",
+        "u_current_sprint": "Sprint 23",
+        "u_assigned_tasks": "TASK-401: Import Module, TASK-402: Data Validation",
+        "u_location": "Remote",
+        "u_notes": "Available for pair programming"
+      },
+      {
+        "u_developer_name": "Emily Chen",
+        "u_shift_start": "2026-02-06T07:00:00",
+        "u_shift_end": "2026-02-06T15:00:00",
+        "u_availability_status": "available",
+        "u_current_sprint": "Sprint 23",
+        "u_assigned_tasks": "TASK-501: Dashboard UI, TASK-502: Component Library",
+        "u_location": "Office - Building A",
+        "u_notes": "Early shift - leaving at 15:00"
+      },
+      {
+        "u_developer_name": "Robert Taylor",
+        "u_shift_start": "2026-02-06T09:00:00",
+        "u_shift_end": "2026-02-06T17:00:00",
+        "u_availability_status": "pto",
+        "u_current_sprint": "Sprint 23",
+        "u_assigned_tasks": "",
+        "u_location": "N/A",
+        "u_notes": "Vacation - back on 2026-02-10"
+      },
+      {
+        "u_developer_name": "Lisa Anderson",
+        "u_shift_start": "2026-02-06T17:00:00",
+        "u_shift_end": "2026-02-07T01:00:00",
+        "u_availability_status": "oncall",
+        "u_current_sprint": "Sprint 23",
+        "u_assigned_tasks": "TASK-601: Production Support",
+        "u_location": "Remote",
+        "u_notes": "On-call rotation for production issues"
+      }
+    ]
+  },
+  "importInstructions": {
+    "description": "Sample data for testing the Developer Workspace",
+    "steps": [
+      "1. Create the tables using the schema files first",
+      "2. Import this sample data manually or via import sets",
+      "3. Adjust dates to current dates as needed",
+      "4. Modify names and details to match your team",
+      "5. Use this data to test workspace navigation and filters"
+    ],
+    "notes": [
+      "This data demonstrates various statuses and scenarios",
+      "Includes examples of scheduled, in-progress, and completed reviews",
+      "Shows different availability statuses for testing filters",
+      "Can be used as a template for creating real data"
+    ]
+  }
+}
